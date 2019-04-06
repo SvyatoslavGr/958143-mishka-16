@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Святослав Грядюга](https://up.htmlacademy.ru/adaptive/16/user/958143).
-* Наставник: `Неизвестно`.
+* Студент: [Святослав Грядюга](https://htmlacademy.ru/profile/id958143).
+* Наставник: [Артём Рудов](https://htmlacademy.ru/profile/artrudov).
 
 ---
 
