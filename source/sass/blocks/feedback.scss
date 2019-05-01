@@ -26,7 +26,7 @@
 @media (min-width: $tablet-width) {
   .feedback {
     background-color: $bg-lightgrey;
-    background-image: url(../../img/review@1x.jpg);
+    background-image: url("../../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -44,7 +44,7 @@
     font-size: 18px;
   }
 
-  .feedback {
+  .feedback__nickname {
     font-size: 17px;
   }
 }
