@@ -1,0 +1,24 @@
+.popup__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $text-black;
+  text-align: center;
+}
+
+.popup__text {
+  line-height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .product__name {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .popup__text {
+    font-size: 17px;
+  }
+}
+
+

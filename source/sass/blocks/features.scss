@@ -1,0 +1,32 @@
+.features__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $text-black;
+}
+
+.features__item {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $text-black;
+}
+
+@media (min-width: $tablet-width) {
+  .features__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .features__item {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

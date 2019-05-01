@@ -1,0 +1,33 @@
+.main-navigation__link {
+  font-size: 17px;
+  font-weight: 700;
+  color: $text-black;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__link {
+    font-size: 15px;
+
+    &--cart {
+      font-size: 17px;
+    }
+    &--delivery {
+      font-weight: 400;
+    }
+    &--search {
+      font-size: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__link {
+    font-size: 17px;
+
+    &--new-products,
+    &--sale,
+    &--delivery {
+      font-size: 15px;
+    }
+  }
+}

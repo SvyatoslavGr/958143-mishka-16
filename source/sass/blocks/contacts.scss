@@ -1,0 +1,36 @@
+.contacts__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $text-black;
+}
+
+.contacts__text {
+  line-height: 30px;
+}
+
+.contacts__email {
+  color: inherit;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
