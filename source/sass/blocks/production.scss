@@ -1,0 +1,21 @@
+.production__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: $text-black;
+}
+
+.production__text {
+  font-size: 13px;
+  text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .production__title {
+    font-size: 20px;
+  }
+
+  .production__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}

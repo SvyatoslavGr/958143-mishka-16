@@ -1,0 +1,33 @@
+.page__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: $text-black;
+
+  background-color: $bg-lightgrey;
+
+  &--text-darkbrown {
+    @media (max-width: $mobile-width-only) {
+      color: #010000;
+    }
+  }
+
+  &--no-bg {
+    background: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

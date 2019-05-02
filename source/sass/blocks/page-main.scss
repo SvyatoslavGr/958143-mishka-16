@@ -1,0 +1,10 @@
+.page-main__text {
+  font-size: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}

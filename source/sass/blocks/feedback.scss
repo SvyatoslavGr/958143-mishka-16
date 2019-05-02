@@ -1,0 +1,61 @@
+.feedback__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $text-black;
+}
+
+.feedback__item {
+  line-height: 30px;
+  text-align: left;
+}
+
+.feedback__author {
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 700;
+  color: $text-black;
+}
+
+.feedback__nickname {
+  font-weight: 400;
+  line-height: 30px;
+  color: $text-dark;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    background-color: $bg-lightgrey;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .feedback__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__item {
+    font-size: 17px;
+  }
+
+  .feedback__author {
+    font-size: 18px;
+  }
+
+  .feedback__nickname {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__author {
+    font-size: 17px;
+  }
+}

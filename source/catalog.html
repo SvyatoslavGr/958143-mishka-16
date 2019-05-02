@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page-header page__header">
@@ -14,30 +15,30 @@
             </a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--current">Каталог товаров</a>
+            <a class="main-navigation__link main-navigation__link--catalog main-navigation__link--current">Каталог товаров</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+            <a class="main-navigation__link main-navigation__link--form" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="search.html">Поиск по сайту</a>
+            <a class="main-navigation__link main-navigation__link--search" href="search.html">Поиск по сайту</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="cart.html">Корзина: пока пуста</a>
+            <a class="main-navigation__link main-navigation__link--cart" href="cart.html">Корзина: пока пуста</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="new-products.html">Новые поступления</a>
+          <li class="main-navigation__item main-navigation__item--new-products">
+            <a class="main-navigation__link main-navigation__link--new-products" href="new-products.html">Новые поступления</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="sale.html">Распродажа</a>
+          <li class="main-navigation__item main-navigation__item--sale">
+            <a class="main-navigation__link main-navigation__link--sale" href="sale.html">Распродажа</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="delivery.html">Бесплатная доставка по России</a>
+          <li class="main-navigation__item main-navigation__item--delivery">
+            <a class="main-navigation__link main-navigation__link--delivery" href="delivery.html">Бесплатная доставка по России</a>
           </li>
         </ul>
-        <button class="button main-navigation__button" type="button">Меню</button>
+        <button class="button main-navigation__button" type="button" aria-label="Меню"></button>
       </nav>
-      <h1 class="text page__title">Каталог товаров</h1>
+      <h1 class="page__title">Каталог товаров</h1>
     </header>
 
     <main class="page__main">
@@ -50,9 +51,9 @@
                 <img class="product__image" src="img/hare.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
               </a>
               <div class="product__info">
-                <a class="product__link" href="hare.html"><h3 class="product__name">Зайчик-попрыгайчик</h3></a>
-                <p class="product__description">Рост 30 см, вес 200 г</p>
-                <p class="product__price">1200 руб.</p>
+                <a class="product__link" href="hare.html"><h3 class="product__name product__name--small">Зайчик-попрыгайчик</h3></a>
+                <p class="product__description product__description--small">Рост 30 см, вес 200 г</p>
+                <p class="product__price product__price--small">1200 руб.</p>
                 <a class="product__link" href="#" aria-label="Добавить в корзину"></a>
               </div>
             </article>
@@ -63,9 +64,9 @@
                 <img class="product__image" src="img/basket-small.jpg" width="260" height="195" alt="Корзинка для белья">
               </a>
               <div class="product__info">
-                <a class="product__link" href="basket-small.html"><h3 class="product__name">Корзинка для белья</h3></a>
-                <p class="product__description">Диаметр 15 см, высота 10 см</p>
-                <p class="product__price">690 руб.</p>
+                <a class="product__link" href="basket-small.html"><h3 class="product__name product__name--small">Корзинка для белья</h3></a>
+                <p class="product__description product__description--small">Диаметр 15 см, высота 10 см</p>
+                <p class="product__price  product__price--small">690 руб.</p>
                 <a class="product__link" href="#" aria-label="Добавить в корзину"></a>
               </div>
             </article>
@@ -76,9 +77,9 @@
                 <img class="product__image" src="img/basket-large.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
               </a>
               <div class="product__info">
-                <a class="product__link" href="basket-large.html"><h3 class="product__name">Большая корзинка для игрушек</h3></a>
-                <p class="product__description">Диаметр 30 см, высота 30 см</p>
-                <p class="product__price">1500 руб.</p>
+                <a class="product__link" href="basket-large.html"><h3 class="product__name product__name--small">Большая корзинка для игрушек</h3></a>
+                <p class="product__description product__description--small">Диаметр 30 см, высота 30 см</p>
+                <p class="product__price product__price--small">1500 руб.</p>
                 <a class="product__link" href="#" aria-label="Добавить в корзину"></a>
               </div>
             </article>
@@ -87,10 +88,10 @@
       </section>
 
       <section class="production">
-        <h2 class="text production__title">Процесс производства</h2>
+        <h2 class="production__title">Процесс производства</h2>
         <img class="production__video" src="img/preview.jpg" width="260" height="150" alt="Процесс производства">
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="button production__button" href="basket.html">Сделать заказ</a>
+        <a class="button button--smaller-line production__button" href="basket.html">Сделать заказ</a>
       </section>
     </main>
 
@@ -115,24 +116,24 @@
     </footer>
 
     <section class="popup">
-      <h2 class="text popup__title">Добавить в корзину</h2>
+      <h2 class="popup__title">Добавить в корзину</h2>
       <p class="popup__text">Выберите размер:</p>
       <form class="form popup__form" action="https://echo.htmlacademy.ru" method="get">
         <ul class="list-reset form__list">
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="s" id="s" checked>
-            <label class="form__label" for="s">S</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="s">S</label>
           </li>
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="m" id="m">
-            <label class="form__label" for="m">M</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="m">M</label>
           </li>
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="l" id="l">
-            <label class="form__label" for="l">L</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="l">L</label>
           </li>
         </ul>
-        <button class="button form__button">Добавить</button>
+        <button class="button button--smaller-line button--blue form__button">Добавить</button>
       </form>
     </section>
   </body>

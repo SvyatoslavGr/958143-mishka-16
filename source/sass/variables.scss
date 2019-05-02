@@ -1,0 +1,22 @@
+$bg-white: #ffffff;
+$bg-lightgrey: #f1f1f1;
+
+$text-dark: #444444;
+$text-black: #000000;
+$text-white: #ffffff;
+
+$aqua-marine: #56c3b2;
+$aqua-marine-light: #63d1bb;
+$aqua-marine-dark: #149080;
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;
+
+@mixin text-aqua($line-height) {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: $line-height;
+  color: #63d1bb;
+  text-transform: uppercase;
+}

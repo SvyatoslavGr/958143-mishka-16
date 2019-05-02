@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин "Мишка"</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page-header page__header">
@@ -14,32 +15,32 @@
             </a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation__link main-navigation__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+            <a class="main-navigation__link main-navigation__link--form" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="search.html">Поиск по сайту</a>
+            <a class="main-navigation__link main-navigation__link--search" href="search.html">Поиск по сайту</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="cart.html">Корзина: пока пуста</a>
+            <a class="main-navigation__link main-navigation__link--cart" href="cart.html">Корзина: пока пуста</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="new-products.html">Новые поступления</a>
+          <li class="main-navigation__item main-navigation__item--new-products">
+            <a class="main-navigation__link main-navigation__link--new-products" href="new-products.html">Новые поступления</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="sale.html">Распродажа</a>
+          <li class="main-navigation__item main-navigation__item--sale">
+            <a class="main-navigation__link main-navigation__link--sale" href="sale.html">Распродажа</a>
           </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="delivery.html">Бесплатная доставка по России</a>
+          <li class="main-navigation__item main-navigation__item--delivery">
+            <a class="main-navigation__link main-navigation__link--delivery" href="delivery.html">Бесплатная доставка по России</a>
           </li>
         </ul>
-        <button class="button main-navigation__button" type="button">Меню</button>
+        <button class="button main-navigation__button" type="button" aria-label="Меню"></button>
       </nav>
 
       <section class="promo page-header__promo">
-        <h1 class="text page__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="page__title page__title--no-bg page__title--text-darkbrown">Милые штуки ручной работы для дома</h1>
         <ul class="list-reset promo__links">
           <li class="promo__item"><a class="promo__link promo__link--interior" href="interior.html">Предметы интерьера</a></li>
           <li class="promo__item"><a class="promo__link promo__link--toys" href="toys.html">Детские игрушки</a></li>
@@ -50,7 +51,7 @@
     <main class="page__main">
       <article class="product">
         <header class="product__header">
-          <h2 class="text product__name">Вязаные корзинки</h2>
+          <h2 class="product__name">Вязаные корзинки</h2>
           <p class="product__label">Товар недели</p>
         </header>
         <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -74,36 +75,36 @@
       </article>
 
       <section class="features">
-        <h2 class="text features__title">Коротко о нас:</h2>
-        <ul class="list-reset feature__list">
-          <li class="feature__item feature__item--materials">Экологически чистые материалы</li>
-          <li class="feature__item feature__item--style">Скандинавский стиль по российской цене</li>
-          <li class="feature__item feature__item--photos">Увеличивает лайки на фотографиях</li>
-          <li class="feature__item feature__item--handmade">Связано вручную с любовью и умилением</li>
-          <li class="feature__item feature__item--manufacturer">Поддержка отечественного производителя</li>
-          <li class="feature__item feature__item--package">Поставляется в подарочной упаковке</li>
+        <h2 class="features__title">Коротко о нас:</h2>
+        <ul class="list-reset features__list">
+          <li class="features__item features__item--materials">Экологически чистые материалы</li>
+          <li class="features__item features__item--style">Скандинавский стиль по российской цене</li>
+          <li class="features__item features__item--photos">Увеличивает лайки на фотографиях</li>
+          <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
+          <li class="features__item features__item--manufacturer">Поддержка отечественного производителя</li>
+          <li class="features__item features__item--package">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
 
       <section class="feedback">
-        <h2 class="text feedback__title">Отзывы</h2>
+        <h2 class="feedback__title">Отзывы</h2>
         <blockquote class="feedback__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
         <cite class="feedback__author">Анастасия Красильникова<span class="feedback__nickname">@misssssiskras</span></cite>
         <div class="feedback__navigation">
           <button class="button feedback__button" aria-label="Предыдущий отзыв"></button>
           <button class="button feedback__button" aria-label="Следующий отзыв"></button>
         </div>
-        <a class="button feedback__button" href="feedback.html">Написать</a>
+        <a class="button button--bigger-font feedback__button" href="feedback.html">Написать</a>
       </section>
 
       <section class="contacts">
-        <h2 class="text contacts__title">Контакты</h2>
+        <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__text">e-mail:<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
         <p class="contacts__text">Адрес:<address class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</address></p>
         <div class="contacts__map">
           <img class="contacts__map-image" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </div>
-        <a class="button contacts__button" href="contact-form.html">Напишите нам</a>
+        <a class="button button--bigger-font contacts__button" href="contact-form.html">Напишите нам</a>
       </section>
     </main>
 
@@ -128,24 +129,24 @@
     </footer>
 
     <section class="popup">
-      <h2 class="text popup__title">Добавить в корзину</h2>
+      <h2 class="popup__title">Добавить в корзину</h2>
       <p class="popup__text">Выберите размер:</p>
       <form class="form popup__form" action="https://echo.htmlacademy.ru" method="get">
         <ul class="list-reset form__list">
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="s" id="s" checked>
-            <label class="form__label" for="s">S</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="s">S</label>
           </li>
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="m" id="m">
-            <label class="form__label" for="m">M</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="m">M</label>
           </li>
           <li class="form__item">
             <input class="visually-hidden form__input" type="radio" name="product-size" value="l" id="l">
-            <label class="form__label" for="l">L</label>
+            <label class="form__label form__label--smaller-line form__label--text-dark" for="l">L</label>
           </li>
         </ul>
-        <button class="button form__button">Добавить</button>
+        <button class="button button--smaller-line button--blue form__button">Добавить</button>
       </form>
     </section>
   </body>

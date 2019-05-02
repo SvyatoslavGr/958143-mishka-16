@@ -1,0 +1,24 @@
+.button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: inherit;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--bigger-font {
+    @media (max-width: $mobile-width-only) {
+      font-size: 18px;
+    }
+  }
+
+  &--smaller-line {
+    line-height: 16px;
+  }
+
+  &--blue {
+    color: $text-white;
+
+    background-color: $aqua-marine-light;
+  }
+}

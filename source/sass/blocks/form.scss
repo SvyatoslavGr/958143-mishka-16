@@ -1,0 +1,65 @@
+.form__label {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $text-black;
+
+  &--smaller-line {
+    line-height: 16px;
+  }
+
+  &--text-dark {
+    color: $text-dark;
+  }
+
+  &--blue {
+    @include text-aqua(16px);
+  }
+}
+
+.form__input {
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  color: inherit;
+  text-align: left;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.form__legend {
+  @include text-aqua(16px);
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .form__fieldset {
+    &--bg-grey {
+      background-color: $bg-lightgrey;
+    }
+  }
+
+  .form__label {
+    font-size: 19px;
+
+    &--smaller-line,
+    &--blue {
+      font-size: 17px;
+    }
+  }
+
+  .form__input {
+    font-size: 19px;
+  }
+
+  .form__note {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
