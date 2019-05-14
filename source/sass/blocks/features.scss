@@ -1,3 +1,7 @@
+.features {
+  padding: 0 30px;
+}
+
 .features__title {
   font-size: 25px;
   font-weight: 700;
@@ -6,6 +10,8 @@
 }
 
 .features__item {
+  padding-top: 75px;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -18,15 +24,55 @@
     line-height: 50px;
   }
 
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .features__item {
+    width: 235px;
+
     font-size: 20px;
     line-height: 22px;
+
+    &--style {
+      order: 2;
+    }
+
+    &--photos {
+      order: 4;
+    }
+
+    &--handmade {
+      order: 1;
+      width: 333px;
+    }
+
+    &--manufacturer {
+      order: 3;
+      width: 333px;
+    }
+
+    &--package {
+      order: 5;
+      width: 333px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    padding-left: 225px;
+    padding-right: 50px;
+  }
+
   .features__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .features__list {
+    width: 645px;
   }
 }

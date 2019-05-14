@@ -1,4 +1,13 @@
+.popup {
+  width: 260px;
+  padding: 0 30px;
+}
+
 .popup__title {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
@@ -8,10 +17,22 @@
 
 .popup__text {
   line-height: 30px;
+  text-align: center;
+}
+
+.popup__button {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
-  .product__name {
+  .popup {
+    width: 350px;
+    padding: 46px 108px;
+  }
+
+  .popup__title {
+    width: 350px;
+
     font-size: 30px;
     line-height: 57px;
   }

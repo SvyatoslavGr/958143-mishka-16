@@ -1,4 +1,33 @@
+.form {
+  &--catalog {
+    .form__item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.form__list {
+  display: flex;
+
+  &--popup {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--catalog {
+    flex-direction: column;
+  }
+}
+
+.form__fieldset {
+  padding: 0;
+
+  border: none;
+}
+
 .form__label {
+  display: block;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
@@ -15,17 +44,69 @@
   &--blue {
     @include text-aqua(16px);
   }
+
+  &--big-paddings {
+    padding: 17px 34px;
+  }
+
+  &--radio {
+    position: relative;
+    padding: 10px 0 10px 62px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 36px;
+      height: 36px;
+
+      border: 2px solid $text-dark;
+      border-radius: 50%;
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+    padding: 10px 0 10px 62px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 36px;
+      height: 35px;
+
+      border: 2px solid $text-dark;
+    }
+  }
 }
 
 .form__input {
+  width: 260px;
+  padding: 16px 0;
+
   font: inherit;
   font-size: 17px;
   line-height: 18px;
   color: inherit;
   text-align: left;
 
+  border: none;
+  border-bottom: 2px solid $text-black;
+
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &--textarea {
+    width: 226px;
+    padding: 15px 15px;
+
+    border: 2px solid $text-black;
   }
 }
 
@@ -38,10 +119,66 @@
   line-height: 16px;
 }
 
+.form__button {
+  width: 260px;
+}
+
 @media (min-width: $tablet-width) {
   .form__fieldset {
+    padding: 50px;
+
     &--bg-grey {
       background-color: $bg-lightgrey;
+    }
+
+    &--big-padding {
+      padding-left: 217px;
+    }
+
+    &--fullname {
+      .form__item {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .form__label {
+        margin-right: 25px;
+      }
+
+      .form__input {
+        flex-grow: 1;
+      }
+    }
+
+    &--contacts {
+      .form__item {
+        display: flex;
+        align-items: baseline;
+      }
+
+      .form__input {
+        width: 501px;
+        margin-left: auto;
+
+        background-color: $bg-lightgrey;
+      }
+    }
+  }
+
+  .form__field-wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .form__list {
+    &--flex-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .form__item {
+        width: 230px;
+      }
     }
   }
 
@@ -56,6 +193,17 @@
 
   .form__input {
     font-size: 19px;
+
+    &--textarea {
+      width: 467px;
+      margin-left: auto;
+    }
+  }
+
+  .form__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .form__note {
