@@ -8,3 +8,10 @@
     line-height: 30px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-main__production {
+    position: relative;
+    margin-bottom: 105px;
+  }
+}

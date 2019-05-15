@@ -1,3 +1,15 @@
+.product {
+  &--index {
+    padding: 0 30px;
+
+    .product__price {
+      width: 290px;
+
+      text-align: center;
+    }
+  }
+}
+
 .product__name {
   font-size: 25px;
   font-weight: 700;
@@ -14,14 +26,20 @@
   @include text-aqua(20px);
 }
 
-.product-description {
+.product__description {
   &--small {
     font-size: 13px;
     line-height: 30px;
   }
 }
 
+.product__table-cell {
+  line-height: 20px;
+}
+
 .product__price {
+  display: block;
+
   font-size: 17px;
   font-weight: 700;
 
@@ -30,27 +48,82 @@
   }
 }
 
+.product__info {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.product__price-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .product__price {
+    margin-right: auto;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .product {
+    &--index {
+      position: relative;
+
+      .product__description {
+        width: 290px;
+      }
+    }
+
+    &--catalog {
+      display: flex;
+
+      .product__description {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .product__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .product__name {
     font-size: 43px;
     line-height: 50px;
 
     &--small {
+      margin: 0;
+
       font-size: 20px;
+      line-height: 24px;
     }
   }
 
   .product__label {
+    width: 70px;
+
+    text-align: center;
+
     @include text-aqua(17px);
   }
 
-  .product-description {
+  .product__description {
     font-size: 17px;
     line-height: 30px;
 
     &--small {
       font-size: 15px;
     }
+  }
+
+  .product__image-wrapper {
+    position: absolute;
+    top: 120px;
+    right: 50px;
+
+    z-index: -1;
   }
 
   .product__price {
@@ -60,11 +133,47 @@
       font-size: 17px;
     }
   }
+
+  .product__info {
+    width: 278px;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .product {
+    &--index {
+      padding-left: 225px;
+      padding-right: 50px;
+    }
+
+    &--catalog {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .product__header {
+    justify-content: flex-start;
+    margin-left: -175px;
+  }
+
   .product__name {
     font-size: 53px;
     line-height: 57px;
+
+    &--small {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .product__label {
+    order: -1;
+    margin-left: 47px;
+    margin-right: 52px;
+  }
+
+  .product__image-wrapper {
+    top: 0;
   }
 }

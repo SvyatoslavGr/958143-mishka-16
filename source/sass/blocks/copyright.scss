@@ -1,6 +1,13 @@
 .copyright {
+  display: block;
+  width: 180px;
+
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
   color: $text-black;
+}
+
+.copyright__link {
+  display: block;
 }

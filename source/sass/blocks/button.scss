@@ -1,4 +1,6 @@
 .button {
+  display: block;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -20,5 +22,9 @@
     color: $text-white;
 
     background-color: $aqua-marine-light;
+  }
+
+  &--large-width {
+    width: 290px;
   }
 }
