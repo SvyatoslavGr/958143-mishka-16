@@ -97,7 +97,7 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 350px 457px;
+    background-size: 350px auto;
 
     .feedback__button {
       padding: 14px 5px;
@@ -148,6 +148,12 @@
 
   .feedback__nav-button {
     border: none;
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dpi), (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .feedback {
+    background-image: url("../img/review@2x.jpg");
   }
 }
 
