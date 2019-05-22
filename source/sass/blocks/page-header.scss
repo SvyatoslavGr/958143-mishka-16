@@ -1,5 +1,11 @@
 @media (min-width: $tablet-width) {
   .page-header__promo {
-    margin-top: -64px;
+    margin-top: -58px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__promo {
+    margin-top: -59px;
   }
 }

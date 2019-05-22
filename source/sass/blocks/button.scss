@@ -1,5 +1,7 @@
 .button {
   display: block;
+  box-sizing: border-box;
+  padding: 14px 5px;
 
   font-size: 17px;
   font-weight: 700;
@@ -7,6 +9,19 @@
   color: inherit;
   text-align: center;
   text-transform: uppercase;
+
+  border: 2px solid $text-dark;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $text-white;
+    background-color: $text-dark;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &--bigger-font {
     @media (max-width: $mobile-width-only) {
@@ -19,12 +34,16 @@
   }
 
   &--blue {
+    padding: 17px 5px;
+
     color: $text-white;
 
     background-color: $aqua-marine-light;
-  }
+    border: none;
 
-  &--large-width {
-    width: 290px;
+    &:hover,
+    &:focus {
+      background-color: #59d5bc;
+    }
   }
 }

@@ -1,28 +1,85 @@
 .form {
   &--catalog {
     .form__item {
-      margin-bottom: 20px;
+      margin-bottom: 19px;
+    }
+  }
+
+  .form__button {
+    padding: 16px 5px;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--type {
+    .form__item:first-child {
+      margin-bottom: 4px;
+    }
+  }
+
+  &--color {
+    .form__legend {
+      &::after {
+        margin-left: 18px;
+      }
+    }
+
+    .form__item {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &--fullname {
+    .form__legend {
+      margin-bottom: 29px;
+
+      &::after {
+        margin-left: 20px;
+      }
+    }
+
+    .form__item {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  &--contacts {
+    .form__label {
+      margin-bottom: 2px;
+    }
+
+    .form__item {
+      margin-bottom: 32px;
+    }
+  }
+
+  &--add {
+    .form__label {
+      margin-bottom: 25px;
+
+      &::after {
+        margin-left: 23px;
+      }
     }
   }
 }
 
 .form__list {
   display: flex;
-
-  &--popup {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &--catalog {
-    flex-direction: column;
-  }
-}
-
-.form__fieldset {
-  padding: 0;
-
-  border: none;
+  flex-direction: column;
 }
 
 .form__label {
@@ -33,25 +90,31 @@
   line-height: 18px;
   color: $text-black;
 
-  &--smaller-line {
-    line-height: 16px;
-  }
-
-  &--text-dark {
-    color: $text-dark;
-  }
+  cursor: pointer;
 
   &--blue {
-    @include text-aqua(16px);
-  }
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
 
-  &--big-paddings {
-    padding: 17px 34px;
+    @include text-aqua(16px);
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      width: 100px;
+      height: 1px;
+      margin-left: 25px;
+
+      background-color: #63d1bb;
+    }
   }
 
   &--radio {
     position: relative;
-    padding: 10px 0 10px 62px;
+    padding: 10px 0 10px 63px;
 
     &::before {
       content: "";
@@ -65,11 +128,19 @@
       border: 2px solid $text-dark;
       border-radius: 50%;
     }
+
+    &:hover::before {
+      border-color: #62d1ba;
+    }
+
+    &:active::before {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--checkbox {
     position: relative;
-    padding: 10px 0 10px 62px;
+    padding: 11px 0 10px 63px;
 
     &::before {
       content: "";
@@ -81,6 +152,14 @@
       height: 35px;
 
       border: 2px solid $text-dark;
+    }
+
+    &:hover::before {
+      border-color: #62d1ba;
+    }
+
+    &:active::before {
+      border-color: rgba(68, 68, 68, 0.3);
     }
   }
 }
@@ -98,8 +177,75 @@
   border: none;
   border-bottom: 2px solid $text-black;
 
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &--radio:focus + .form__label--radio::before {
+    border-color: #62d1ba;
+  }
+
+  &--radio:checked + .form__label--radio::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+
+  &--checkbox:focus + .form__label--checkbox::before {
+    border-color: #62d1ba;
+  }
+
+  &--checkbox:checked + .form__label--checkbox::after {
+    content: "";
+    position: absolute;
+
+    top: 11px;
+    left: 9px;
+
+    width: 22px;
+    height: 16px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 16px;
+  }
+
+  &--tel {
+    width: 220px;
+    padding-right: 40px;
+    padding-bottom: 13px;
+
+    font-size: 19px;
+
+    &:hover + .form__phone-icon,
+    &:focus + .form__phone-icon {
+      fill: #62d1ba;
+      opacity: 1;
+    }
+  }
+
+  &--email {
+    width: 220px;
+    padding-right: 40px;
+
+    &:hover + .form__mail-icon,
+    &:focus + .form__mail-icon {
+      fill: #62d1ba;
+      opacity: 1;
+    }
   }
 
   &--textarea {
@@ -107,39 +253,161 @@
     padding: 15px 15px;
 
     border: 2px solid $text-black;
+
+    &:hover,
+    &:focus {
+      border-color: #62d1ba;
+    }
   }
 }
 
 .form__legend {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0;
+
   @include text-aqua(16px);
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    width: 100px;
+    height: 1px;
+    margin-left: 26px;
+
+    background-color: #63d1bb;
+  }
 }
 
 .form__note {
+  margin-top: 10px;
+  margin-bottom: 31px;
+
   font-size: 14px;
   line-height: 16px;
 }
 
 .form__button {
   width: 260px;
+
+  font-family: inherit;
+  background-color: $bg-white;
+}
+
+.form__item {
+  &--tel {
+    position: relative;
+
+    .form__label {
+      &::after {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    .form__label {
+      margin-bottom: 7px;
+
+      &::after {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.form__phone-icon {
+  position: absolute;
+  bottom: 17px;
+  right: 8px;
+
+  width: 25px;
+  height: 24px;
+
+  opacity: 0.2;
+}
+
+.form__mail-icon {
+  position: absolute;
+  bottom: 9px;
+  right: 4px;
+
+  width: 32px;
+  height: 32px;
+
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
   .form__fieldset {
-    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 50px 50px 51px 51px;
 
     &--bg-grey {
       background-color: $bg-lightgrey;
     }
 
-    &--big-padding {
-      padding-left: 217px;
+    &--type {
+      .form__list {
+        width: 501px;
+      }
+
+      .form__item {
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    &--color {
+      padding-bottom: 26px;
+
+      .form__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 501px;
+      }
+
+      .form__item {
+        width: 230px;
+        margin-bottom: 25px;
+        margin-right: 32px;
+
+        &:nth-child(2n) {
+          @media (max-width: 1149px) {
+            margin-right: 0;
+          }
+        }
+      }
     }
 
     &--fullname {
+      padding-top: 45px;
+      padding-bottom: 50px;
+
+      .form__list {
+        width: 501px;
+      }
+
       .form__item {
         display: flex;
         flex-direction: row;
         align-items: baseline;
+
+        margin-bottom: 19px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       .form__label {
@@ -148,36 +416,40 @@
 
       .form__input {
         flex-grow: 1;
+        padding-left: 16px;
+        padding-bottom: 13px;
       }
     }
 
     &--contacts {
+      padding-top: 45px;
+      padding-bottom: 50px;
+
+      .form__list {
+        width: 100%;
+      }
+
       .form__item {
         display: flex;
+        justify-content: space-between;
         align-items: baseline;
+        margin-bottom: 19px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       .form__input {
-        width: 501px;
-        margin-left: auto;
+        width: 405px;
+        padding-right: 80px;
+        padding-left: 16px;
 
         background-color: $bg-lightgrey;
-      }
-    }
-  }
 
-  .form__field-wrapper {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .form__list {
-    &--flex-row {
-      flex-direction: row;
-      flex-wrap: wrap;
-
-      .form__item {
-        width: 230px;
+        &--email {
+          padding-bottom: 13px;
+        }
       }
     }
   }
@@ -187,7 +459,30 @@
 
     &--smaller-line,
     &--blue {
+      width: auto;
       font-size: 17px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &--radio {
+      padding: 16px 0 17px 80px;
+
+      &::before {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &--checkbox {
+      padding: 16px 0 17px 80px;
+
+      &::before {
+        width: 50px;
+        height: 48px;
+      }
     }
   }
 
@@ -197,17 +492,149 @@
     &--textarea {
       width: 467px;
       margin-left: auto;
+      padding-top: 13px;
+      padding-bottom: 17px;
     }
+
+    &--radio:checked + .form__label--radio::after {
+      top: 15px;
+      left: 15px;
+
+      width: 22px;
+      height: 22px;
+    }
+
+    &--checkbox:checked + .form__label--checkbox::after {
+      top: 16px;
+      left: 11px;
+
+      width: 33px;
+      height: 22px;
+
+      background-size: 33px 22px;
+    }
+  }
+
+  .form__legend {
+    width: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__phone-icon {
+    right: 26px;
+  }
+
+  .form__mail-icon {
+    right: 22px;
   }
 
   .form__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2px;
+    padding: 0 50px;
   }
 
   .form__note {
+    order: 1;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 13px;
+
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .form__button {
+    width: 230px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset {
+    padding-left: 112px;
+    padding-right: 225px;
+
+    &--type {
+      padding-bottom: 50px;
+
+      .form__list {
+        width: 700px;
+      }
+
+      .form__legend {
+        margin-left: 2px;
+      }
+
+      .form__label {
+        padding: 15px 0 18px 81px;
+      }
+    }
+
+    &--color {
+      padding-right: 50px;
+
+      .form__legend {
+        margin-left: -1px;
+      }
+
+      .form__list {
+        width: 875px;
+      }
+
+      .form__item {
+        margin-right: 32px;
+
+        &:nth-child(3n) {
+          margin-left: 2px;
+          margin-right: 0;
+        }
+      }
+
+      .form__label {
+        padding: 15px 0 18px 81px;
+      }
+    }
+
+    &--fullname {
+      .form__list {
+        width: 698px;
+      }
+    }
+
+    &--contacts {
+      .form__input {
+        width: 604px;
+      }
+    }
+
+    &--add {
+      .form__input {
+        width: 666px;
+      }
+    }
+  }
+
+  .form__phone-icon {
+    right: 8px;
+  }
+
+  .form__mail-icon {
+    right: 4px;
+  }
+
+  .form__footer {
+    margin-top: -2px;
+    padding: 0 225px;
+  }
+
+  .form__note {
+    margin-right: -2px;
+    padding-top: 10px;
+    padding-bottom: 12px;
   }
 }

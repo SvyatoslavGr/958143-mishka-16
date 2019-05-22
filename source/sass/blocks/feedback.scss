@@ -1,8 +1,15 @@
 .feedback {
+  width: 260px;
   padding: 0 30px;
+
+  .feedback__button {
+    padding: 13px 5px 15px 5px;
+  }
 }
 
 .feedback__title {
+  margin-bottom: 23px;
+
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
@@ -10,6 +17,8 @@
 }
 
 .feedback__item {
+  margin-right: 0;
+  margin-bottom: 28px;
   margin-left: 0;
 
   line-height: 30px;
@@ -17,6 +26,10 @@
 }
 
 .feedback__author {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
   font-style: normal;
   font-size: 17px;
   font-weight: 700;
@@ -24,6 +37,8 @@
 }
 
 .feedback__nickname {
+  margin-top: 3px;
+
   font-weight: 400;
   line-height: 30px;
   color: $text-dark;
@@ -33,12 +48,23 @@
   display: flex;
   width: 260px;
   height: 52px;
+  margin-bottom: 38px;
 }
 
 .feedback__nav-button {
   width: 50%;
 
   border: 1px solid #ececec;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--prev {
     background-color: $bg-white;
@@ -61,24 +87,37 @@
   .feedback {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 670px;
+    min-height: 457px;
+    padding: 0 50px 0 48px;
 
     background-color: $bg-white;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 350px;
+    background-size: 350px 457px;
+
+    .feedback__button {
+      padding: 14px 5px;
+    }
   }
 
   .feedback__title {
     order: -2;
+    margin-top: 77px;
+    margin-left: -3px;
     margin-right: auto;
+    margin-bottom: 49px;
 
     font-size: 43px;
     line-height: 50px;
   }
 
   .feedback__item {
+    margin-top: 0;
+    margin-bottom: 57px;
     font-size: 17px;
   }
 
@@ -90,26 +129,65 @@
   }
 
   .feedback__nickname {
+    margin-top: 4px;
+
     font-size: 17px;
   }
 
   .feedback__button {
     order: -1;
+    width: 175px;
+    margin-top: 79px;
+  }
+
+  .feedback__navigation {
+    width: 174px;
+    margin-top: 3px;
+    margin-right: 1px;
+  }
+
+  .feedback__nav-button {
+    border: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .feedback {
+    width: 875px;
     padding-left: 225px;
     padding-right: 50px;
+
+    background-position: 50px 0;
   }
 
   .feedback__title {
+    margin-top: 70px;
+    margin-bottom: 49px;
+
     font-size: 53px;
     line-height: 57px;
   }
 
+  .feedback__button {
+    margin: 0;
+    margin-top: 79px;
+  }
+
+  .feedback__item {
+    width: 770px;
+    margin-bottom: 39px;
+    font-size: 17px;
+  }
+
   .feedback__author {
     font-size: 17px;
+  }
+
+  .feedback__nickname {
+    margin-top: 3px;
+  }
+
+  .feedback__navigation {
+    margin-top: 2px;
   }
 }

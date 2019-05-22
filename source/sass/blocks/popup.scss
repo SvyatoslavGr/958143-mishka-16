@@ -1,37 +1,95 @@
 .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
   width: 260px;
-  padding: 0 30px;
+  margin-top: -160px;
+  margin-left: -160px;
+  padding: 32px 29px 45px 29px;
+
+  background: $bg-white;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+
+  &--show {
+    display: block;
+  }
+
+  .form__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+
+  .form__input {
+    &:focus + .form__label {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+
+    &:checked + .form__label {
+      border: 2px solid #62d1ba;
+    }
+  }
+
+  .form__label {
+    width: 78px;
+    padding: 16px 0;
+
+    line-height: 16px;
+    color: $text-dark;
+    text-align: center;
+
+    border: 2px solid rgba(68, 68, 68, 0.1);
+
+    &:hover {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
 }
 
 .popup__title {
   display: block;
-  width: 150px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
   color: $text-black;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .popup__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   line-height: 30px;
   text-align: center;
 }
 
 .popup__button {
   width: 100%;
+  font-family: inherit;
 }
 
 @media (min-width: $tablet-width) {
   .popup {
     width: 350px;
-    padding: 46px 108px;
+    margin-left: -283px;
+    padding: 32px 108px 45px 108px;
+
+    .form__label {
+      width: 108px;
+    }
   }
 
   .popup__title {
-    width: 350px;
+    margin-left: -1px;
+    margin-right: -3px;
 
     font-size: 30px;
     line-height: 57px;
