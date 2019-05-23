@@ -103,6 +103,7 @@
 
     &::after {
       content: "";
+      display: block;
       flex-grow: 1;
       width: 100px;
       height: 1px;
@@ -177,13 +178,13 @@
   border: none;
   border-bottom: 2px solid $text-black;
 
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
   &:hover,
   &:focus {
     border-color: #62d1ba;
-  }
-
-  &::placeholder {
-    opacity: 0.3;
   }
 
   &--radio:focus + .form__label--radio::before {
@@ -251,6 +252,7 @@
   &--textarea {
     width: 226px;
     padding: 15px 15px;
+    overflow: auto;
 
     border: 2px solid $text-black;
 
@@ -272,6 +274,7 @@
 
   &::after {
     content: "";
+    display: block;
     flex-grow: 1;
     width: 100px;
     height: 1px;
@@ -328,6 +331,7 @@
   width: 25px;
   height: 24px;
 
+  fill: #000000;
   opacity: 0.2;
 }
 
@@ -339,6 +343,7 @@
   width: 32px;
   height: 32px;
 
+  fill: #000000;
   opacity: 0.2;
 }
 
@@ -431,7 +436,7 @@
 
       .form__item {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: baseline;
         margin-bottom: 19px;
 
@@ -442,6 +447,7 @@
 
       .form__input {
         width: 405px;
+        margin-left: auto;
         padding-right: 80px;
         padding-left: 16px;
 

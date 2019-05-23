@@ -56,7 +56,7 @@
 
   &[href]:hover,
   &[href]:focus {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   &[href]:active {
@@ -65,12 +65,16 @@
 }
 
 .main-navigation__search-icon {
+  fill: #231F20;
+
   padding-right: 26px;
 
   opacity: 0.2;
 }
 
 .main-navigation__cart-icon {
+  fill: #231F20;
+
   padding-right: 25px;
 
   opacity: 0.2;

@@ -4,11 +4,13 @@
 }
 
 .catalog__item {
+  width: 260px;
   margin-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__item {
+    width: 668px;
     margin-bottom: 54px;
 
     &:last-child {
@@ -25,6 +27,7 @@
   }
 
   .catalog__item {
+    width: 316px;
     margin-right: 50px;
     margin-bottom: 57px;
 
