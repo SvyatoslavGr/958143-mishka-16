@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>Каталог товаров</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body class="page page--catalog">
     <div style="display:none">
-      <include src="source/img/sprite.svg"></include>
+      <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header page__header">
       <nav class="main-navigation main-navigation--closed main-navigation--no-js page-header__navigation">
@@ -222,5 +224,6 @@
     </section>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/svgxuse.min.js" defer></script>
   </body>
 </html>
