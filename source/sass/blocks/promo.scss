@@ -1,13 +1,22 @@
 .promo {
-  background-color: $bg-lightgrey;
+  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: -127px -18px;
+  background-position: center -18px;
+  box-shadow: inset 0 1px 0 0 #ececec;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
     background-size: 575px auto;
   }
+
+  .promo__links {
+    margin: 0 auto;
+  }
+}
+
+.promo__links {
+  width: 320px;
 }
 
 .promo__link {
@@ -41,7 +50,7 @@
     &:hover,
     &:focus {
       margin-top: -5px;
-      padding-bottom: 32px;
+      padding-bottom: 34px;
 
       background-color: #59d5bc;
 
@@ -80,7 +89,7 @@
     &:hover,
     &:focus {
       margin-top: -5px;
-      padding-bottom: 32px;
+      padding-bottom: 34px;
 
       background-color: #46c1ae;
 
@@ -111,7 +120,23 @@
   }
 
   .promo__links {
+    position: relative;
+
     display: flex;
+    width: 668px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+
+      width: 768px;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
   }
 
   .promo__item {
@@ -119,7 +144,7 @@
   }
 
   .promo__link {
-    padding: 28px 35px 32px;
+    padding: 28px 35px 30px;
 
     font-size: 20px;
     line-height: 30px;
@@ -155,14 +180,31 @@
 @media (min-width: $desktop-width) {
   .promo {
     background-image: url("../img/hero-desktop@1x.jpg");
+  }
 
-    .promo__links {
-      padding: 0 50px;
+  .promo__links {
+    width: 1050px;
+
+    &::after {
+      left: 0;
+      bottom: -20px;
+
+      width: 1150px;
+      height: 34px;
+
+      background-size: 1250px 34px;
+      background-position: -50px 0;
     }
   }
 
   .promo__link {
     padding-left: 36px;
+    padding-bottom: 28px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 33px;
+    }
   }
 }
 

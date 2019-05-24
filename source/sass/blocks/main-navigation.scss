@@ -1,3 +1,12 @@
+.main-navigation {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-navigation__list {
+  width: 320px;
+}
+
 .main-navigation__item {
   box-shadow: 0 1px 0 0 #ececec;
 
@@ -158,11 +167,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-navigation {
+    width: 768px;
+  }
+
   .main-navigation__list {
     display: flex;
     flex-wrap: wrap;
     width: 668px;
-    margin: 0 auto;
     padding: 0 50px;
   }
 
@@ -258,6 +270,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-navigation {
+    width: 1150px;
+  }
+
   .main-navigation__list {
     width: 1050px;
   }

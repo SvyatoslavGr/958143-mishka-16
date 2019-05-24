@@ -34,7 +34,11 @@
 }
 
 .page-main__text {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 24px;
+  padding: 0 30px;
 
   font-size: 13px;
 }
@@ -68,6 +72,7 @@
   }
 
   .page-main__text {
+    width: 668px;
     margin-bottom: 7px;
     padding: 0 50px;
 
@@ -106,6 +111,7 @@
   }
 
   .page-main__text {
-    padding: 0 225px;
+    width: 675px;
+    padding: 0 250px 0 225px;
   }
 }
